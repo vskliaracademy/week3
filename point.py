@@ -11,7 +11,8 @@ class Point2D():
 
     def distance(self, point):
         """Расстояние между точками"""
-        return ((self.x - point.x) ** 2 + (self.y - point.y) ** 2) ** 0.5
+        return round(((self.x - point.x) ** 2 +
+                      (self.y - point.y) ** 2) ** 0.5, 2)
 
     @property
     def points_count(self):
@@ -34,8 +35,8 @@ class Point3D(Point2D):
 
     def distance(self, point):
         """Расстояние между точками"""
-        return ((self.x - point.x) ** 2 + (self.y - point.y) ** 2 +
-                (self.z - point.z) ** 2) ** 0.5
+        return round(((self.x - point.x) ** 2 + (self.y - point.y) ** 2 +
+                (self.z - point.z) ** 2) ** 0.5, 2)
 
     def __str__(self):
         return f"{self.x, self.y, self.z}"
@@ -44,7 +45,7 @@ class Point3D(Point2D):
 if __name__ == "__main__":
     # создать две точки Point2D
     p1 = Point2D(10, 20)
-    p2 = Point2D(10, 50)
+    p2 = Point2D(30, 40)
     print(f"Точки Point2D: {p1}, {p2}")
     print(f"Количество точек: {p1.points_count}")
     print(f"Расстояние между точками: {p1.distance(p2)}")
