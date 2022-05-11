@@ -55,9 +55,6 @@ class Fraction(MathMixin):
     def __str__(self):
         return f"{self.num}/{self.den}"
 
-    def __repr__(self):
-        return f"{self.num}/{self.den}"
-
     def __sub__(self, fract):
         """Вычитание:  2/3 - 1/3 = 1/3"""
         # наименьшее общее кратное
